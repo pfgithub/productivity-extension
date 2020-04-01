@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Productivity",
+    "version": "1.0",
+
+    "description": "Adds productivity.",
+
+    "icons": {
+        "48": "/assets/icon/48x48.png",
+        "96": "/assets/icon/96x96.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["src/page.js"]
+        }
+    ],
+
+    "browser_action": {
+        "browser_style": true,
+        "default_popup": "src/popup/popup.html",
+        "default_icon": {
+            "16": "assets/action/16x16.png",
+            "32": "assets/action/32x32.png"
+        }
+    }
+}
